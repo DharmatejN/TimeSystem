@@ -31,7 +31,6 @@ export class AddholidaysComponent implements OnInit {
 
   addHoliday() {
     this.router.navigate(['/menu/holidays']);
-    
   }
 
   hasFormErrors() {
