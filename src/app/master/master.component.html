@@ -1,0 +1,73 @@
+<p-toast key="leftToast" position="top-left" [style]="{marginTop: '40px', 'marginLeft':'100px'}"></p-toast>
+<p-toast key="middleToast" position="top-center" [style]="{marginTop: '40px'}"></p-toast>
+<p-toast key="alert" position="center" (onClose)="onReject()" [modal]="true" [baseZIndex]="5000">
+  <ng-template let-message pTemplate="message">
+    <div style="text-align: center;vertical-align: middle; font-size:1.25em;border-bottom: solid 1px gray;padding-bottom: 10px;">
+      <i class="pi pi-exclamation-triangle" style="font-size: 1.25em;color:red"></i>
+      <div>{{message.summary}}</div>
+    </div>
+    <div style="text-align: center;vertical-align: middle;font-size:1em;padding-top:15px;padding-bottom:15px;border-bottom: solid 1px gray;">
+      {{message.detail}}
+    </div>
+    <div class="ui-g ui-fluid ui-g-nopad" style="padding:0px">
+      <div class="ui-g-6">
+        <button type="button" pButton (click)="onReject()" label="Ok" class="ui-button-warning"></button>
+      </div>
+    </div>
+  </ng-template>
+</p-toast>
+<!-- HEADER -->
+<div class="ui-g ui-md-12 ui-lg-12 layout-topbar" style="background-color: white;border-bottom:1px solid #e7e7e7;">
+  <div class="ui-g-6 ui-md-6 ui-lg-3">
+    <img src="../../assets/images/ebixconsulting.jpg" Width="363px" Height="52px">
+  </div>
+  <div class="ui-g-6 ui-md-6 ui-lg-3 homeLogoutSec" style="padding: 20px;text-align: right;">
+      Hello, Ramesh{{_userName}}
+      &nbsp;<button pButton icon="fa fa-home fa-2x" pTooltip="Dashboard" tooltipPosition="bottom" (click)="navigateTo('/menu/dashboard')"></button>&nbsp;
+      <button pButton icon="fa fa-sign-out fa-2x" pTooltip="Logout" tooltipPosition="bottom" (click)="logout()" class="ui-button-danger"
+        style="padding-right:30px"></button>&nbsp;&nbsp;
+    </div>
+  <div class="ui-g-12 ui-md-12 ui-lg-3 topbar-menu">
+    <div class="ui-g-6" style="text-align: center;">
+      Timesheets
+    </div>
+    <div class="ui-g-6" style="text-align: center;">
+      Pay Stubs
+    </div>
+  </div>
+  <div class="ui-g-12 ui-md-6 ui-lg-6 homeLogout" style="padding: 20px;text-align: right;">
+    Hello, Ramesh{{_userName}}
+    &nbsp;<button pButton icon="fa fa-home fa-2x" pTooltip="Dashboard" tooltipPosition="bottom" (click)="navigateTo('/menu/dashboard')"></button>&nbsp;
+    <button pButton icon="fa fa-sign-out fa-2x" pTooltip="Logout" tooltipPosition="bottom" (click)="logout()" class="ui-button-danger"
+      style="padding-right:30px"></button>&nbsp;&nbsp;
+  </div>
+</div>
+<div class="ui-g ui-md-12 ui-lg-12 " style="height: 100%;">
+  <!-- NAVIGATION -->
+  <div class="ui-g ui-md-0 ui-lg-1 layout-sidebar">
+    <div *ngFor="let navItem of _NavItems" class="ui-g-12 ui-md-12 layout-menu">
+      {{navItem}}
+    </div>
+  </div>
+  <!-- BODY -->
+  <div class="ui-g ui-md-12 ui-lg-11" style="height: 100%;">
+    <div class="ui-g ui-md-12 ui-lg-12">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="ui-g ui-md-12 ui-lg-12" style="height: 100%;text-align: center;">
+      © Copyright Ebix Consulting One Liberty Square, New Britain, CT 06051
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="ng-tns-c0-0" id="layout-topbar" _ngcontent-c0=""><a class="menu-button" href="#" _ngcontent-c0=""><i class="fa fa-bars"
+      _ngcontent-c0=""></i></a><a class="logo" href="#/" _ngcontent-c0=""><img class="ng-tns-c0-0" alt="logo" src="assets/showcase/images/logo.png"
+      _ngcontent-c0=""></a>
+  <ul class="topbar-menu" _ngcontent-c0="">
+    <li class="ng-tns-c0-0" _ngcontent-c0=""><a class="ng-tns-c0-0" href="#/setup" _ngcontent-c0="">GET STARTED</a></li>
+    <li class="topbar-menu-themes" _ngcontent-c0=""><a class="ng-tns-c0-0" href="#" _ngcontent-c0="">THEMES</a>
+    </li>
+    <li class="ng-tns-c0-0" _ngcontent-c0=""><a class="ng-tns-c0-0" href="#/support" _ngcontent-c0="">SUPPORT</a></li>
+  </ul>
+</div> -->

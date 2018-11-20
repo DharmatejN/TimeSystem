@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f5f7f8!important;
+    margin: 0px;
+    top: 100px;
+    font-size: 1em !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: steelblue;
+  }
+
+
+
+
+.leftNav1 .ui-menu {
+	padding: 0;
+	background-color: white;
+  border: 1px solid white;
+  width: 100%;
+}
+.leftNav1 .ui-menu .ui-menuitem-link .ui-menuitem-text, body .ui-menubar .ui-menuitem-link .ui-menuitem-text, body .ui-tieredmenu .ui-menuitem-link .ui-menuitem-text, body .ui-contextmenu .ui-menuitem-link .ui-menuitem-text, body .ui-megamenu .ui-menuitem-link .ui-menuitem-text, body .ui-slidemenu .ui-menuitem-link .ui-menuitem-text {
+	color: black;
+}
+.leftNav1 .ui-menu .ui-menuitem-link .ui-menuitem-icon, body .ui-menubar .ui-menuitem-link .ui-menuitem-icon, body .ui-tieredmenu .ui-menuitem-link .ui-menuitem-icon, body .ui-contextmenu .ui-menuitem-link .ui-menuitem-icon, body .ui-megamenu .ui-menuitem-link .ui-menuitem-icon, body .ui-slidemenu .ui-menuitem-link .ui-menuitem-icon {
+	color:black;
+	margin-right: 0.5em;
+}
+body .ui-sidebar{
+  background-color: white;
+}
+body .ui-slidemenu {
+	padding: 0;
+	background-color: white;
+	border: 1px solid white;
+}
+
+.mainHeader{
+  font-size:24px;
+  color:dodgerblue;
+  background-color: aliceblue;
+  height: 45px;
+  border:solid 1px dodgerblue;
+  border-radius: .3em;
+}
+
+.helpClass{
+  background-color: gold;
+  height: 43px;
+  border-top-right-radius: .3em;
+  border-bottom-right-radius: .3em;
+  text-align: center;
+}
+
+.recordsFound
+{
+  color:black;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: normal;
+  padding-top:5px;
+  padding-left:10px;
+}
+
+.recordsBar
+{
+  background-color: blanchedalmond;
+  padding:2px;
+}

@@ -1,0 +1,65 @@
+.layout-topbar {
+		box-sizing: border-box;
+	padding: 0;
+	height: 70px;
+	box-sizing: border-box;
+	width: 100%;
+	z-index: 9997;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+}
+
+.layout-sidebar {
+	height: 100%;
+	background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+    margin-top: 5px;
+    
+}
+
+.layout-sidebar .layout-menu {
+	width: 100%;
+	height: 50px;
+	padding: 0px;
+	cursor: pointer;
+	border-bottom: 1px solid #e3e9ea;
+	box-sizing: border-box;
+}
+
+.layout-sidebar .layout-menu:hover{
+	background-color: #eee;
+    transition: all .5s ease;
+}
+
+@media screen and (max-width:64em){
+.topbar-menu {
+    background-color: #fff;
+    float: none;
+    width: 100%;
+	text-align: center;
+}}
+
+/*768px*/
+@media screen and (max-width:64em)
+{
+.layout-sidebar{
+	display: none;
+}
+}
+
+.homeLogout{
+	display: block;
+}
+.homeLogoutSec{
+	display:none;
+}
+
+/*768px*/
+@media screen and (max-width:64em){
+.homeLogout{
+	display: none;
+}
+.homeLogoutSec{
+	display:block;
+}
+}
+
